@@ -1,32 +1,28 @@
-Evernote SDK for Python 3
+Evernote Export to Hexo Note
 ============================================
 
-Evernote API version 1.25
-
 Overview
---------
-**This is a test SDK!** The official Evernote SDK for Python doesn't support Python 3 yet; this repository is an experiment as we try to migrate.
+---
+Already contains Evernote Python3 SDK  V1.25.
+Just input param in `config.json` and run 
+`python ExportEverNoteBlog.py`
 
-This SDK contains wrapper code used to call the Evernote Cloud API from Python.
-
-The SDK also contains a sample script. The code demonstrates the basic use of the SDK for single-user scripts. Real web applications must use OAuth to authenticate to the Evernote service.
+Config
+---
+```json
+{
+  "EvernoteToken": "S=s6:U=6.....",
+  "NoteStoreUrl": "https://www.evernote.com/shard/s11/notestore",
+  "EverNoteRootNotebook": "Blog",
+  "ExportHTMLPath": "D:/cygwin/home/geosmart.io/source/_posts"
+}
+```
 
 Prerequisites
--------------
-In order to use the code in this SDK, you need to obtain an API key from http://dev.evernote.com/documentation/cloud. You'll also find full API documentation on that page.
+---
+1. Python 3 installed
+2. get evernote develop token in [DeveloperToken](https://www.evernote.com/api/DeveloperToken.action)
 
-In order to run the sample code, you need a user account on the sandbox service where you will do your development. Sign up for an account at https://sandbox.evernote.com/Registration.action 
-
-In order to run the client client sample code, you need a developer token. Get one at https://sandbox.evernote.com/api/DeveloperToken.action
-
-Getting Started
----------------
-The code in `sample/client/EDAMTest.py` demonstrates the basics of using the Evernote API, using developer tokens to simplify the authentication process while you're learning.
-
-1. Open `sample/client/EDAMTest.py`
-2. Scroll down and fill in your Evernote developer token.
-3. On the command line, run the following command to execute the script:
-
-    ```bash
-    $ export PYTHONPATH=../../lib; python EDAMTest.py
-    ```
+3. `pip install bs4`
+4. hexo config
+5. hexo blog deploy
