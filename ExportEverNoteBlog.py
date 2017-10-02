@@ -2,12 +2,6 @@
 # -*- coding: utf-8 -*-
 import sys
 import os
-import evernote.edam.userstore.UserStore as UserStore
-import evernote.edam.notestore.NoteStore as NoteStore
-import thrift.protocol.TBinaryProtocol as TBinaryProtocol
-import thrift.transport.THttpClient as THttpClient
-
-import webbrowser
 
 package_file = os.path.normpath(os.path.abspath(__file__))
 package_path = os.path.dirname(package_file)
@@ -20,6 +14,12 @@ if lib_path not in sys.path:
 if evernote_path not in sys.path:
     sys.path.append(evernote_path)
 
+import evernote.edam.userstore.UserStore as UserStore
+import evernote.edam.notestore.NoteStore as NoteStore
+import thrift.protocol.TBinaryProtocol as TBinaryProtocol
+import thrift.transport.THttpClient as THttpClient
+
+import webbrowser
 
 def LOG(*args):
     print("Evernote: ", *args)
