@@ -253,8 +253,3 @@ if __name__ == '__main__':
         everNoteClient = EverNoteClient(EvernoteToken, NoteStoreUrl)
         cmd = BlogExporter(everNoteClient, ExportHTMLPath, EverNoteRootNotebook)
         cmd.export_blog()
-
-# EvernoteToken = "S=s56:U=63871d:E=1662bace3dd:C=15ed3fbb4d0:P=1cd:A=en-devtoken:V=2:H=f50c3be7ae0fde5b526e7ca5713f296a"
-# NoteStoreUrl = "https://www.evernote.com/shard/s56/notestore"
-# EverNoteRootNotebook = 'Blog'
-# ExportHTMLPath = 'D:/cygwin/home/geosmart.io/source/_posts'
