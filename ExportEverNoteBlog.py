@@ -21,6 +21,7 @@ import thrift.transport.THttpClient as THttpClient
 
 import webbrowser
 
+
 def LOG(*args):
     print("Evernote: ", *args)
 
@@ -45,7 +46,7 @@ class BlogExporter:
         self._notebooks = self._everNoteClient.get_notebooks()
 
         notebooks = [x for x in self._notebooks if x.stack == self._everNoteRootNotebook]
-        # TODO concurrent tunning
+        # TODO tunning:concurrent
         for notebook in notebooks:
             notes = self._everNoteClient.find_notes_metadata(notebook.guid)
             for note_meta in notes:
@@ -56,40 +57,42 @@ class BlogExporter:
     def render_note(self, notebook, note_meta):
         try:
             note = self._everNoteClient.get_note(note_meta.guid)
-            note_cdate = self._everNoteClient.get_note_creation_date(note.created)
-
-            note_tagname = self._everNoteClient.get_note_tag_name(note.guid)
-            note_header = self.render_hexo_blog_metadata(notebook.name, note.title, note_cdate, note_tagname)
-
-            notePath = self._exportHTMLPath + '/' + self.get_note_path(note_cdate, note.title)
-
-            # from html2text import html2text
-            # html convert to markdown
-            # mdtxt = html2text(note.content)
-            from bs4 import BeautifulSoup
-            from bs4 import Tag
-            soup = BeautifulSoup(note.content, "html.parser")
-            # TODO concurrent tunning
-            # <en-media longdesc = "./1506490529273.png" alt="demo" title="" type ="image/png" hash= "ddf6a5a3693ad0d4cd5b33dbd60c7203"  style = "border: 0; vertical-align: middle; max-width: 100%;" / >
-            for enMedia in soup.findAll('en-media'):
-                imgAlt = enMedia.get("alt")
-                imgType = enMedia.get("type")
-                hash = enMedia.get("hash")
-                # TODO latEx formula converter
-                imgPath = self.download_note_resource(notePath, note.guid, imgAlt, imgType, hash)
-                imgTag = soup.new_tag('img', src=imgPath, alt=imgAlt)
-                index = enMedia.parent.contents.index(enMedia)
-                enMedia.parent.insert(index + 1, imgTag)
+            noteCreateDate = self._everNoteClient.get_note_creation_date(note.created)
+            noteTagName = self._everNoteClient.get_note_tag_name(note.guid)
+            noteHeader = self.render_hexo_blog_metadata(notebook.name, note.title, noteCreateDate, noteTagName)
+            notePath = self._exportHTMLPath + '/' + self.get_note_path(noteCreateDate, note.title)
+            soup = self.parse_note_resource(note, notePath)
 
             f = open(notePath + '.html', mode="w", encoding='utf-8')
-            f.write(note_header + str(soup))
+            f.write(noteHeader + soup)
             f.close()
             LOG("Conversion ok")
         except:
             LOG("Conversion failed")
             raise
 
-    def render_hexo_blog_metadata(self, note_book_name, note_name, note_cdate, note_tags):
+    def parse_note_resource(self, note, notePath):
+        # from html2text import html2text
+        # html convert to markdown
+        # mdtxt = html2text(note.content)
+        from bs4 import BeautifulSoup
+        from bs4 import Tag
+        soup = BeautifulSoup(note.content, "html.parser")
+        # TODO tunning:concurrent
+        # TODO tunning:without downloading existed resource
+        # <en-media longdesc = "./1506490529273.png" alt="demo" title="" type ="image/png" hash= "ddf6a5a3693ad0d4cd5b33dbd60c7203"  style = "border: 0; vertical-align: middle; max-width: 100%;" / >
+        for enMedia in soup.findAll('en-media'):
+            longdesc = enMedia.get("longdesc")
+            imgAlt = enMedia.get("alt")
+            imgType = enMedia.get("type")
+            hash = enMedia.get("hash")
+            imgPath = self.download_note_resource(notePath, note.guid, imgAlt, imgType, hash)
+            imgTag = soup.new_tag('img', src=imgPath, alt=imgAlt)
+            index = enMedia.parent.contents.index(enMedia)
+            enMedia.parent.insert(index + 1, imgTag)
+        return str(soup)
+
+    def render_hexo_blog_metadata(self, noteBookName, noteName, noteCreateDate, noteTags):
         """
         ---
         title: TensorFlow
@@ -100,31 +103,32 @@ class BlogExporter:
         Returns:string
         """
         meta = "---\n"
-        meta += "title: %s\n" % (note_name or "Untitled")
-        meta += "date: %s\n" % note_cdate
-        meta += "tags: [%s]\n" % (",".join(note_tags))
-        meta += "categories: %s\n" % note_book_name
+        meta += "title: %s\n" % (noteName or "Untitled")
+        meta += "date: %s\n" % noteCreateDate
+        meta += "tags: [%s]\n" % (",".join(noteTags))
+        meta += "categories: %s\n" % noteBookName
         meta += "---\n\n"
         return meta
 
-    def download_note_resource(self, note_path, note_guid, res_name, mime_type, res_hash):
+    def download_note_resource(self, notePath, noteGuid, resName, mimeType, resHash):
         """
         download image and save to local path
         Args:
-            note_guid: note guid
+            noteGuid: note guid
             hash: note resource hash code
 
         Returns: image relative path
         """
         import codecs
-        hash_bin = codecs.decode(res_hash, 'hex')
+        hash_bin = codecs.decode(resHash, 'hex')
         try:
-            resource = self._everNoteClient.get_resource_by_hash(hash_bin, note_guid)
-            return self.save(note_path, res_name, mime_type, resource.data.body)
+            resName = resHash if (resName is None) else resName
+            resource = self._everNoteClient.get_resource_by_hash(hash_bin, noteGuid)
+            return self.save(notePath, resName, mimeType, resource.data.body)
         except:
             raise
 
-    def save(self, notePath, file_name, mime_type, data):
+    def save(self, notePath, fileName, mimeType, data):
         """
         save the specified hash and return the saved file's URL
         """
@@ -134,24 +138,24 @@ class BlogExporter:
             'image/jpeg': '.jpg',
             'image/gif': '.gif'
         }
-        print('download note  %s resource-%s' % (notePath, file_name))
+        print('download note  %s resource-%s' % (notePath, fileName))
         if not os.path.exists(notePath):
             os.makedirs(notePath)
 
-        if file_name is not None:
+        if fileName is not None:
             # eg: 2017/09/noteName/imagename.jpg
-            noteRes = notePath + '/' + file_name + MIME_TO_EXTESION_MAPPING[mime_type]
+            noteRes = notePath + '/' + fileName + MIME_TO_EXTESION_MAPPING[mimeType]
             f = open(noteRes, "wb")
             f.write(data)
             f.close()
 
-            return file_name + MIME_TO_EXTESION_MAPPING[mime_type]
+            return fileName + MIME_TO_EXTESION_MAPPING[mimeType]
 
         else:
             return ""
 
-    def get_note_path(self, note_cdate, note_name):
-        return note_cdate.split("-")[0] + '/' + note_cdate.split("-")[1] + '/' + note_name
+    def get_note_path(self, noteCreateDate, noteName):
+        return noteCreateDate.split("-")[0] + '/' + noteCreateDate.split("-")[1] + '/' + noteName
 
 
 class EverNoteClient:
@@ -181,16 +185,13 @@ class EverNoteClient:
         url = "http://www.evernote.com/shard/" + id + "/notestore"
         return url
 
-    def get_resource_by_hash(self, hash_bin, note_guid):
-        resource = self._noteStore.getResourceByHash(self._token, note_guid, hash_bin, True, False,
+    def get_resource_by_hash(self, hashBin, noteGuid):
+        resource = self._noteStore.getResourceByHash(self._token, noteGuid, hashBin, True, False,
                                                      False)
-
-        # base64 = codecs.encode(resource.data.body, 'base64')
-        # return base64
         return resource
 
-    def find_notes_metadata(self, notebook_guid):
-        notes = self._noteStore.findNotesMetadata(self._token, NoteStore.NoteFilter(notebookGuid=notebook_guid), 0,
+    def find_notes_metadata(self, notebookGuid):
+        notes = self._noteStore.findNotesMetadata(self._token, NoteStore.NoteFilter(notebookGuid=notebookGuid), 0,
                                                   1000,
                                                   NoteStore.NotesMetadataResultSpec(includeTitle=True,
                                                                                     includeAttributes=True)
@@ -228,15 +229,15 @@ class EverNoteClient:
         EverNoteClient._notebooks = notebooks
         return notebooks
 
-    def get_note(self, note_guid):
-        return self._noteStore.getNote(self._token, note_guid, True, False, False, False)
+    def get_note(self, noteGuid):
+        return self._noteStore.getNote(self._token, noteGuid, True, False, False, False)
 
-    def get_note_tag_name(self, tag_guid):
-        return self._noteStore.getNoteTagNames(self._token, tag_guid)
+    def get_note_tag_name(self, tagGuid):
+        return self._noteStore.getNoteTagNames(self._token, tagGuid)
 
-    def get_note_creation_date(self, note_cdate):
+    def get_note_creation_date(self, noteCreateDate):
         import datetime
-        return datetime.datetime.fromtimestamp(int(note_cdate / 1000)).strftime('%Y-%m-%d')
+        return datetime.datetime.fromtimestamp(int(noteCreateDate / 1000)).strftime('%Y-%m-%d')
         # return datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
 

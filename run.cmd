@@ -1,0 +1,2 @@
+python ExportEverNoteBlog.py
+pause
