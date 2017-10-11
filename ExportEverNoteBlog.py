@@ -70,7 +70,7 @@ class BlogExporter:
             # self.render_note_task(key, notes[key])
             threads.append(gevent.spawn(self.render_note_task, key, notes[key]))
         gevent.joinall(threads)
-        print('All subprocesses done.')
+        LOG("Success Exported notes %d" % len(notes))
 
         #
         # from multiprocessing import Pool
@@ -314,7 +314,7 @@ if __name__ == '__main__':
         everNoteClient = EverNoteClient(EvernoteToken, NoteStoreUrl)
 
         start = time.time()
-        cmd = BlogExporter(everNoteClient, ExportHTMLPath, EverNoteRootNotebook, candidateNoteBookName)
+        cmd = BlogExporter(everNoteClient, ExportHTMLPath, EverNoteRootNotebook, CandidateNoteBookName)
         cmd.export_blog()
         end = time.time()
         print('Export runs %0.2f seconds.' % (end - start))

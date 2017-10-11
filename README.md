@@ -7,14 +7,15 @@ Already contains Evernote Python3 SDK  V1.25.
 Just input param in `config.json` and run 
 `python ExportEverNoteBlog.py`
 
-Config
+Config Demo
 ---
 ```json
 {
   "EvernoteToken": "S=s6:U=6.....",
   "NoteStoreUrl": "https://www.evernote.com/shard/s11/notestore",
   "EverNoteRootNotebook": "Blog",
-  "ExportHTMLPath": "D:/cygwin/home/geosmart.io/source/_posts"
+  "ExportHTMLPath": "D:/cygwin/home/geosmart.io/source/_posts",
+  "CandidateNoteBookName": "Z00Candidate"
 }
 ```
 
