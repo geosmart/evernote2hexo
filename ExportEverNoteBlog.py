@@ -1,7 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-import sys
 import os
+import sys
+
+import time
+import urllib
 
 package_file = os.path.normpath(os.path.abspath(__file__))
 package_path = os.path.dirname(package_file)
@@ -14,12 +17,15 @@ if lib_path not in sys.path:
 if evernote_path not in sys.path:
     sys.path.append(evernote_path)
 
-import evernote.edam.userstore.UserStore as UserStore
 import evernote.edam.notestore.NoteStore as NoteStore
 import thrift.protocol.TBinaryProtocol as TBinaryProtocol
 import thrift.transport.THttpClient as THttpClient
 
 import webbrowser
+
+# from gevent import monkey
+# monkey.patch_socket()
+import gevent
 
 
 def LOG(*args):
@@ -30,40 +36,71 @@ class BlogExporter:
     """
     export evernote notes to static blog
     """
+    _candidateNoteBookName = None
     _exportHTMLPath = None
     _everNoteRootNotebook = None
     _everNoteClient = None
     _noteStore = None
     _notebooks = None
 
-    def __init__(self, everNoteClient, exportHtmlPath, everNoteRootNotebook):
+    def __init__(self, everNoteClient, exportHtmlPath, everNoteRootNotebook, candidateNoteBookName):
         self._everNoteRootNotebook = everNoteRootNotebook
         self._exportHTMLPath = exportHtmlPath
         self._everNoteClient = everNoteClient
+        self._candidateNoteBookName = candidateNoteBookName
 
     def export_blog(self):
         self._noteStore = self._everNoteClient.get_note_store()
         self._notebooks = self._everNoteClient.get_notebooks()
 
         notebooks = [x for x in self._notebooks if x.stack == self._everNoteRootNotebook]
+
+        LOG("Export notebooks %d" % len(notebooks))
+        notes = dict()
         # TODO tunning:concurrent
         for notebook in notebooks:
-            notes = self._everNoteClient.find_notes_metadata(notebook.guid)
-            for note_meta in notes:
-                # notes.reverse()
-                LOG("Retrieving note \"%s\"..." % note_meta.title)
-                self.render_note(notebook, note_meta)
+            if notebook.name != self._candidateNoteBookName:
+                _notes = self._everNoteClient.find_notes_metadata(notebook.guid)
+                if len(_notes) > 0:
+                    notes[notebook.name] = _notes
 
-    def render_note(self, notebook, note_meta):
+        print('Parent process %s.' % os.getpid())
+        threads = []
+        for key in notes:
+            # self.render_note_task(key, notes[key])
+            threads.append(gevent.spawn(self.render_note_task, key, notes[key]))
+        gevent.joinall(threads)
+        print('All subprocesses done.')
+
+        #
+        # from multiprocessing import Pool
+        # print('Parent process %s.' % os.getpid())
+        # p = Pool()
+        #     print('add process to pool...')
+        #     exporter = BlogExporter(self._everNoteRootNotebook, self._exportHTMLPath, self._everNoteClient)
+        #     # exporter._noteStore = self._noteStore
+        #     # exporter._notebooks = self._notebooks
+        #     p.apply_async(exporter.render_note_task, args=(key, notes[key],))
+        # print('Waiting for all subprocesses done...')
+        # p.close()
+        # p.join()
+
+    def render_note_task(self, noteBookName, notes):
+        print('Run task %s (%s)...' % (noteBookName, os.getpid()))
+        for note_meta in notes:
+            LOG("Retrieving note \"%s\"..." % note_meta.title)
+            self.render_note(noteBookName, note_meta)
+
+    def render_note(self, noteBookName, noteMeta):
         try:
-            note = self._everNoteClient.get_note(note_meta.guid)
+            note = self._everNoteClient.get_note(noteMeta.guid)
             noteCreateDate = self._everNoteClient.get_note_creation_date(note.created)
             noteTagName = self._everNoteClient.get_note_tag_name(note.guid)
-            noteHeader = self.render_hexo_blog_metadata(notebook.name, note.title, noteCreateDate, noteTagName)
+            noteHeader = self.render_hexo_blog_metadata(noteBookName, note.title, noteCreateDate, noteTagName)
             notePath = self._exportHTMLPath + '/' + self.get_note_path(noteCreateDate, note.title)
             soup = self.parse_note_resource(note, notePath)
 
-            f = open(notePath + '.html', mode="w", encoding='utf-8')
+            f = open(notePath + '.md', mode="w", encoding='utf-8')
             f.write(noteHeader + soup)
             f.close()
             LOG("Conversion ok")
@@ -76,21 +113,41 @@ class BlogExporter:
         # html convert to markdown
         # mdtxt = html2text(note.content)
         from bs4 import BeautifulSoup
-        from bs4 import Tag
         soup = BeautifulSoup(note.content, "html.parser")
         # TODO tunning:concurrent
         # TODO tunning:without downloading existed resource
         # <en-media longdesc = "./1506490529273.png" alt="demo" title="" type ="image/png" hash= "ddf6a5a3693ad0d4cd5b33dbd60c7203"  style = "border: 0; vertical-align: middle; max-width: 100%;" / >
+
+        mdText = soup.find('center').contents[0]
+        mdText = urllib.parse.unquote(urllib.parse.unquote(mdText))
+        mdText = mdText.replace('%u', '\\u')
+        mdText = str.encode(mdText).decode('unicode-escape')
+
+        # TODO replace resourceName to alt
+        threads = []
         for enMedia in soup.findAll('en-media'):
-            longdesc = enMedia.get("longdesc")
-            imgAlt = enMedia.get("alt")
-            imgType = enMedia.get("type")
-            hash = enMedia.get("hash")
-            imgPath = self.download_note_resource(notePath, note.guid, imgAlt, imgType, hash)
-            imgTag = soup.new_tag('img', src=imgPath, alt=imgAlt)
-            index = enMedia.parent.contents.index(enMedia)
-            enMedia.parent.insert(index + 1, imgTag)
-        return str(soup)
+            tarSrc = enMedia.get("alt")
+            if tarSrc is not None:
+                curSrc = enMedia.get("longdesc")
+                imgType = enMedia.get("type")
+                tarSrc = tarSrc + self.get_resource_suffix(imgType)
+                mdText = mdText.replace(curSrc, tarSrc)
+            # self.render_resource(enMedia, note, notePath, soup)
+            threads.append(gevent.spawn(self.render_resource, enMedia, note, notePath, soup))
+        gevent.joinall(threads)
+        print('All subprocesses done.')
+
+        return mdText
+
+    def render_resource(self, enMedia, note, notePath, soup):
+        longdesc = enMedia.get("longdesc")
+        imgAlt = enMedia.get("alt")
+        imgType = enMedia.get("type")
+        hash = enMedia.get("hash")
+        imgPath = self.download_note_resource(notePath, note.guid, imgAlt, imgType, hash)
+        imgTag = soup.new_tag('img', src=imgPath, alt=imgAlt)
+        index = enMedia.parent.contents.index(enMedia)
+        enMedia.parent.insert(index + 1, imgTag)
 
     def render_hexo_blog_metadata(self, noteBookName, noteName, noteCreateDate, noteTags):
         """
@@ -128,29 +185,31 @@ class BlogExporter:
         except:
             raise
 
-    def save(self, notePath, fileName, mimeType, data):
-        """
-        save the specified hash and return the saved file's URL
-        """
+    def get_resource_suffix(self, mimeType):
         MIME_TO_EXTESION_MAPPING = {
             'image/png': '.png',
             'image/jpg': '.jpg',
             'image/jpeg': '.jpg',
             'image/gif': '.gif'
         }
+        return MIME_TO_EXTESION_MAPPING[mimeType]
+
+    def save(self, notePath, fileName, mimeType, data):
+        """
+        save the specified hash and return the saved file's URL
+        """
         print('download note  %s resource-%s' % (notePath, fileName))
         if not os.path.exists(notePath):
             os.makedirs(notePath)
 
         if fileName is not None:
             # eg: 2017/09/noteName/imagename.jpg
-            noteRes = notePath + '/' + fileName + MIME_TO_EXTESION_MAPPING[mimeType]
+            noteRes = notePath + '/' + fileName + self.get_resource_suffix(mimeType)
             f = open(noteRes, "wb")
             f.write(data)
             f.close()
 
-            return fileName + MIME_TO_EXTESION_MAPPING[mimeType]
-
+            return fileName + self.get_resource_suffix(mimeType)
         else:
             return ""
 
@@ -250,7 +309,12 @@ if __name__ == '__main__':
         EverNoteRootNotebook = config['EverNoteRootNotebook']
         NoteStoreUrl = config['NoteStoreUrl']
         ExportHTMLPath = config['ExportHTMLPath']
+        CandidateNoteBookName = config['CandidateNoteBookName']
 
         everNoteClient = EverNoteClient(EvernoteToken, NoteStoreUrl)
-        cmd = BlogExporter(everNoteClient, ExportHTMLPath, EverNoteRootNotebook)
+
+        start = time.time()
+        cmd = BlogExporter(everNoteClient, ExportHTMLPath, EverNoteRootNotebook, candidateNoteBookName)
         cmd.export_blog()
+        end = time.time()
+        print('Export runs %0.2f seconds.' % (end - start))
