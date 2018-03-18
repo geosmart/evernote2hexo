@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://C:/Users/Think/Downloads/UGC_Agrregator/.idea/UGC_Aggregator.iml" filepath="C:/Users/Think/Downloads/UGC_Agrregator/.idea/UGC_Aggregator.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/evernote-sdk-python3.iml" filepath="$PROJECT_DIR$/.idea/evernote-sdk-python3.iml" />
+      <module fileurl="file://D:/WorkSpace/lianlian/code/llbrain.ml/.idea/llbrain.ml.iml" filepath="D:/WorkSpace/lianlian/code/llbrain.ml/.idea/llbrain.ml.iml" />
+      <module fileurl="file://D:/WorkSpace/tutorial/sparkml/.idea/sparkml.iml" filepath="D:/WorkSpace/tutorial/sparkml/.idea/sparkml.iml" />
+      <module fileurl="file://D:/WorkSpace/tutorial/tensorflow/.idea/tensorflow.iml" filepath="D:/WorkSpace/tutorial/tensorflow/.idea/tensorflow.iml" />
+      <module fileurl="file://D:/WorkSpace/tutorial/tensorflow-mnist/.idea/tensorflow-mnist.iml" filepath="D:/WorkSpace/tutorial/tensorflow-mnist/.idea/tensorflow-mnist.iml" />
     </modules>
   </component>
 </project>

@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec96a925-0d17-468c-8af5-8f0d95c5c5b2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ExportEverNoteBlog.py" afterPath="$PROJECT_DIR$/ExportEverNoteBlog.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.json" afterPath="$PROJECT_DIR$/config.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/ExportEverNoteBlogForCSDN.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/OSSHelper.py" />
+      <change beforePath="$PROJECT_DIR$/.idea/evernote-sdk-python3.iml" afterPath="$PROJECT_DIR$/.idea/evernote-sdk-python3.iml" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/config.json" afterPath="$PROJECT_DIR$/config.json" />
+      <change beforePath="$PROJECT_DIR$/run.cmd" afterPath="$PROJECT_DIR$/run.cmd" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,12 +20,28 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/evernote2hexo$ExportEverNoteBlog.coverage" NAME="ExportEverNoteBlog Coverage Results" MODIFIED="1506997564377" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/evernote_sdk_python3$EDAMTest.coverage" NAME="EDAMTest Coverage Results" MODIFIED="1506791548795" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sample/client" />
-    <SUITE FILE_PATH="coverage/evernote_sdk_python3$ExportEverNoteBlog__1_.coverage" NAME="ExportEverNoteBlog Coverage Results" MODIFIED="1506948011785" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/evernote2hexo$minist_cnn_tensorboard.coverage" NAME="minist_cnn_tensorboard Coverage Results" MODIFIED="1514985356751" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/WorkSpace/tutorial/tensorflow/src/demo" />
+    <SUITE FILE_PATH="coverage/evernote2hexo$minist.coverage" NAME="minist Coverage Results" MODIFIED="1514856653616" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/WorkSpace/tutorial/tensorflow" />
     <SUITE FILE_PATH="coverage/evernote_sdk_python3$Demo1.coverage" NAME="Demo1 Coverage Results" MODIFIED="1506934192523" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sample/client" />
-    <SUITE FILE_PATH="coverage/evernote_sdk_python3$Demo.coverage" NAME="Demo Coverage Results" MODIFIED="1506794007929" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sample/client" />
+    <SUITE FILE_PATH="coverage/evernote_sdk_python3$ExportEverNoteBlog__1_.coverage" NAME="ExportEverNoteBlog Coverage Results" MODIFIED="1506948011785" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/evernote2hexo$minist_softmax_tensorboard.coverage" NAME="minist_softmax_tensorboard Coverage Results" MODIFIED="1514987102747" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/WorkSpace/tutorial/tensorflow/src/demo" />
+    <SUITE FILE_PATH="coverage/evernote2hexo$custom_model.coverage" NAME="custom_model Coverage Results" MODIFIED="1514853635426" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/WorkSpace/tutorial/tensorflow" />
+    <SUITE FILE_PATH="coverage/evernote2hexo$Preprocess.coverage" NAME="Preprocess Coverage Results" MODIFIED="1511877424302" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/WorkSpace/lianlian/code/llbrain.ml/src/preprocess" />
+    <SUITE FILE_PATH="coverage/evernote2hexo$spark_statis.coverage" NAME="spark_statis Coverage Results" MODIFIED="1509927470220" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/WorkSpace/tutorial/sparkml" />
+    <SUITE FILE_PATH="coverage/evernote2hexo$ExportEverNoteBlogForCSDN.coverage" NAME="ExportEverNoteBlogForCSDN Coverage Results" MODIFIED="1521328964571" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/evernote2hexo$SparkMLClassifier.coverage" NAME="SparkMLClassifier Coverage Results" MODIFIED="1511878663906" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/WorkSpace/lianlian/code/llbrain.ml/src/ml" />
+    <SUITE FILE_PATH="coverage/evernote2hexo$minist__1_.coverage" NAME="minist (1) Coverage Results" MODIFIED="1514865740400" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/WorkSpace/tutorial/tensorflow/src/demo" />
+    <SUITE FILE_PATH="coverage/evernote_sdk_python3$EDAMTest.coverage" NAME="EDAMTest Coverage Results" MODIFIED="1506791548795" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sample/client" />
+    <SUITE FILE_PATH="coverage/evernote2hexo$spark_logit.coverage" NAME="spark_logit Coverage Results" MODIFIED="1509927452594" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/WorkSpace/tutorial/sparkml" />
+    <SUITE FILE_PATH="coverage/evernote2hexo$main.coverage" NAME="main Coverage Results" MODIFIED="1514858059384" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/WorkSpace/tutorial/tensorflow/tensorflow-mnist" />
+    <SUITE FILE_PATH="coverage/evernote2hexo$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1514859903680" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/WorkSpace/tutorial/tensorflow-mnist" />
+    <SUITE FILE_PATH="coverage/evernote2hexo$demo.coverage" NAME="demo Coverage Results" MODIFIED="1509893767564" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/WorkSpace/tutorial/sparkml" />
+    <SUITE FILE_PATH="coverage/evernote2hexo$linear_regressor.coverage" NAME="linear_regressor Coverage Results" MODIFIED="1514812643933" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/WorkSpace/tutorial/tensorflow" />
     <SUITE FILE_PATH="coverage/evernote_sdk_python3$ExportEverNoteBlog.coverage" NAME="ExportEverNoteBlog Coverage Results" MODIFIED="1506950535781" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/evernote2hexo$ExportEverNoteBlog.coverage" NAME="ExportEverNoteBlog Coverage Results" MODIFIED="1508076676336" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/evernote2hexo$helloworld.coverage" NAME="helloworld Coverage Results" MODIFIED="1514812361193" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/WorkSpace/tutorial/tensorflow" />
+    <SUITE FILE_PATH="coverage/evernote_sdk_python3$Demo.coverage" NAME="Demo Coverage Results" MODIFIED="1506794007929" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sample/client" />
+    <SUITE FILE_PATH="coverage/evernote2hexo$minist_cnn.coverage" NAME="minist_cnn Coverage Results" MODIFIED="1514984763598" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/WorkSpace/tutorial/tensorflow/src/demo" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -30,51 +52,86 @@
     <option name="SHOW_EMPTY_GROUPS" value="false" />
     <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="evernote-sdk-python3" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="ExportEverNoteBlogForCSDN.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ExportEverNoteBlogForCSDN.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="262">
+              <caret line="106" column="23" lean-forward="false" selection-start-line="106" selection-start-column="23" selection-end-line="106" selection-end-column="23" />
+              <folding>
+                <element signature="e#46#55#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OSSHelper.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/OSSHelper.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="936">
+              <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Blog</find>
-      <find>tag</find>
-      <find>dat</find>
-      <find>en-media</find>
-      <find>tagNames</find>
-      <find>_export_path</find>
-      <find>enc</find>
-      <find>EVERNOTE_SETTINGS</find>
-      <find>extractTags</find>
-      <find>_domain</find>
-      <find>domain</find>
-      <find>self.</find>
-      <find>EvernoteDo</find>
-      <find>self.noteStore</find>
-      <find>MAIN</find>
-      <find>MAI</find>
-      <find>M</find>
-      <find>Mai</find>
-      <find>Main</find>
-      <find>resou</find>
-      <find>mk</find>
-      <find>init</find>
-      <find>get_note_creation_date</find>
-      <find>connect</find>
-      <find>token</find>
-      <find>self.token()</find>
-      <find>on_token</find>
-      <find>download_note_resource</find>
-      <find>load note</find>
-      <find>html2</find>
+      <find>np</find>
+      <find>\</find>
+      <find>python</find>
+      <find>normal_summary</find>
+      <find>vector_data</find>
+      <find>parse_interaction</find>
+      <find>stage</find>
+      <find>log</find>
+      <find>8g</find>
+      <find>memory</find>
+      <find>mem</find>
+      <find>column</find>
+      <find>categ</find>
+      <find>onehot</find>
+      <find>vector</find>
+      <find>ALL_FIRST_ATTEMPT_SIGN_1_DATE_ALL</find>
+      <find>ALL_FIRST_ATTEMPT_SIGN_1_DATE_30D_vector</find>
+      <find>ALL_MOB_NUM_BANK_CARD</find>
+      <find>ALL_FIRST_ATTEMPT_SIGN_1_DATE</find>
+      <find>defa</find>
+      <find>map</find>
+      <find>index</find>
+      <find>logistic</find>
+      <find>graph</find>
+      <find>FLAGS</find>
+      <find>main</find>
+      <find>training</find>
+      <find>soup</find>
+      <find>oss</find>
+      <find>png</find>
     </findStrings>
     <replaceStrings>
       <replace>noteName</replace>
       <replace>EverNoteClient</replace>
       <replace>self._noteStore</replace>
       <replace>self._token</replace>
+      <replace>mdText</replace>
+      <replace>print(</replace>
+      <replace>print(&quot;</replace>
+      <replace>/</replace>
+      <replace>&quot;)</replace>
+      <replace>normal_sum</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -92,6 +149,30 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/ExportEverNoteBlog.py" />
         <option value="$PROJECT_DIR$/config.json" />
+        <option value="D:/WorkSpace/tutorial/sparkml/demo.py" />
+        <option value="D:/WorkSpace/tutorial/sparkml/spark_logit.py" />
+        <option value="D:/WorkSpace/tutorial/sparkml/spark_statis.py" />
+        <option value="D:/WorkSpace/lianlian/code/llbrain.ml/res/config/youbei_train_0720.json" />
+        <option value="D:/WorkSpace/lianlian/code/llbrain.ml/res/config/feature_config.json" />
+        <option value="D:/WorkSpace/lianlian/code/llbrain.ml/src/Main.py" />
+        <option value="D:/WorkSpace/lianlian/code/llbrain.ml/src/ml/SparkMLCommon.py" />
+        <option value="D:/WorkSpace/lianlian/code/llbrain.ml/src/ml/SparkMLClassifier.py" />
+        <option value="D:/WorkSpace/lianlian/code/llbrain.ml/src/preprocess/vec_table_to_csv.py" />
+        <option value="D:/WorkSpace/lianlian/code/llbrain.ml/src/preprocess/Preprocess.py" />
+        <option value="D:/WorkSpace/tutorial/tensorflow/helloworld.py" />
+        <option value="D:/WorkSpace/tutorial/tensorflow/linear_regressor.py" />
+        <option value="D:/WorkSpace/tutorial/tensorflow/custom_model.py" />
+        <option value="D:/WorkSpace/tutorial/tensorflow/minist.py" />
+        <option value="D:/WorkSpace/tutorial/tensorflow-mnist/requirements.txt" />
+        <option value="D:/WorkSpace/tutorial/tensorflow/src/mnist/convolutional.py" />
+        <option value="D:/WorkSpace/tutorial/tensorflow/src/mnist/regression.py" />
+        <option value="D:/WorkSpace/tutorial/tensorflow/src/main.py" />
+        <option value="D:/WorkSpace/tutorial/tensorflow/src/demo/minist.py" />
+        <option value="D:/WorkSpace/tutorial/tensorflow/src/demo/minist_cnn.py" />
+        <option value="D:/WorkSpace/tutorial/tensorflow/src/demo/minist_cnn_tensorboard.py" />
+        <option value="D:/WorkSpace/tutorial/tensorflow/src/demo/minist_softmax_tensorboard.py" />
+        <option value="$PROJECT_DIR$/OSSHelper.py" />
+        <option value="$PROJECT_DIR$/ExportEverNoteBlogForCSDN.py" />
       </list>
     </option>
   </component>
@@ -101,13 +182,13 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="80" />
-    <option name="y" value="-8" />
-    <option name="width" value="1528" />
-    <option name="height" value="912" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="627" />
+    <option name="y" value="196" />
+    <option name="width" value="1404" />
+    <option name="height" value="1044" />
   </component>
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
@@ -126,34 +207,38 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="evernote2hexo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="evernote2hexo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
+          <expand>
+            <path>
+              <item name="evernote2hexo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="evernote2hexo" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\NoteSpace\evernote-sdk-python3" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\NoteSpace\evernote-sdk-python3\sample\client" />
+      <recent name="D:\WorkSpace\tutorial\tensorflow\src\demo" />
+      <recent name="D:\WorkSpace\tutorial\tensorflow\src" />
+      <recent name="D:\WorkSpace\tutorial\tensorflow" />
+      <recent name="D:\WorkSpace\tutorial\sparkml" />
+      <recent name="D:\NoteSpace\evernote2hexo" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\WorkSpace\tutorial\tensorflow\src\demo" />
+      <recent name="D:\WorkSpace\tutorial\tensorflow\src" />
+      <recent name="D:\WorkSpace\tutorial\tensorflow\data" />
+      <recent name="D:\NoteSpace\evernote-sdk-python3" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -168,8 +253,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.ExportEverNoteBlog">
-    <configuration default="false" name="ExportEverNoteBlog" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.ExportEverNoteBlogForCSDN">
+    <configuration name="ExportEverNoteBlogForCSDN" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -182,11 +267,87 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="evernote-sdk-python3" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ExportEverNoteBlog.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ExportEverNoteBlogForCSDN.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
-      <method />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="minist (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="D:/WorkSpace/tutorial/tensorflow/src/demo" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="tensorflow" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="D:\WorkSpace\tutorial\tensorflow\src\demo\minist_softmax.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="minist_cnn" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="D:/WorkSpace/tutorial/tensorflow/src/demo" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="tensorflow" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="D:/WorkSpace/tutorial/tensorflow/src/demo/minist_cnn.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="minist_cnn_tensorboard" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="D:/WorkSpace/tutorial/tensorflow/src/demo" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="tensorflow" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="D:/WorkSpace/tutorial/tensorflow/src/demo/minist_cnn_tensorboard.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="minist_softmax_tensorboard" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="D:/WorkSpace/tutorial/tensorflow/src/demo" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="tensorflow" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="D:/WorkSpace/tutorial/tensorflow/src/demo/minist_softmax_tensorboard.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
     </configuration>
     <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -284,15 +445,6 @@
       <module name="evernote-sdk-python3" />
       <method />
     </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
       <command value="run" />
       <scripts />
@@ -320,6 +472,14 @@
       <option name="USE_PATTERN" value="false" />
       <method />
     </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+    </configuration>
     <configuration default="true" type="tests" factoryName="Nosetests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -335,14 +495,36 @@
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;.&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method />
     </configuration>
-    <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="Python.ExportEverNoteBlog" />
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="evernote-sdk-python3" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;.&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Python.minist (1)" />
+      <item index="1" class="java.lang.String" itemvalue="Python.minist_cnn" />
+      <item index="2" class="java.lang.String" itemvalue="Python.minist_cnn_tensorboard" />
+      <item index="3" class="java.lang.String" itemvalue="Python.minist_softmax_tensorboard" />
+      <item index="4" class="java.lang.String" itemvalue="Python.ExportEverNoteBlogForCSDN" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Python.ExportEverNoteBlog" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python.ExportEverNoteBlogForCSDN" />
+        <item index="1" class="java.lang.String" itemvalue="Python.minist_softmax_tensorboard" />
+        <item index="2" class="java.lang.String" itemvalue="Python.minist_cnn_tensorboard" />
+        <item index="3" class="java.lang.String" itemvalue="Python.minist_cnn" />
+        <item index="4" class="java.lang.String" itemvalue="Python.minist (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -350,7 +532,10 @@
     <option name="remove_strategy" value="false" />
   </component>
   <component name="StructureViewFactory">
-    <option name="ACTIVE_ACTIONS" value=",SHOW_INHERITED,SHOW_FIELDS" />
+    <option name="ACTIVE_ACTIONS" value=",SHOW_FIELDS,ALPHA_COMPARATOR,SHOW_INHERITED" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -372,20 +557,22 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="80" y="-8" width="1528" height="912" extended-state="0" />
+    <frame x="96" y="-6" width="2466" height="1448" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2228836" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36770186" sideWeight="0.50264204" order="13" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33167702" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18121693" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.45817727" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19875777" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16206336" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10235581" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2974239" sideWeight="0.497358" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug Logs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -393,19 +580,27 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Execute Anonymous" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3925466" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27476883" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Salesforce" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="processedProjectFiles" value="true" />
+    <option name="version" value="1" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://C:/ProgramData/Anaconda3/Lib/site-packages/pyspark/ml/linalg/__init__.py</url>
+          <line>525</line>
+          <option name="timeStamp" value="158" />
+        </line-breakpoint>
+      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
@@ -413,229 +608,79 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="107" />
+      <option name="time" value="232" />
     </breakpoint-manager>
-    <watches-manager />
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="df_last.collect()" language="Python" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/evernote/edam/userstore/constants.py">
+    <entry file="file://D:/WorkSpace/tutorial/tensorflow/logs/events.out.tfevents.1514776501.GEOSMART" />
+    <entry file="file://D:/WorkSpace/tutorial/tensorflow/logs/events.out.tfevents.1514776920.GEOSMART" />
+    <entry file="file://$USER_HOME$/AppData/Local/conda/conda/envs/tensorflow/Lib/site-packages/tensorflow/python/estimator/estimator_lib.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/conda/conda/envs/tensorflow/Lib/site-packages/tensorflow/__init__.py" />
+    <entry file="file://D:/WorkSpace/tutorial/tensorflow/logs/events.out.tfevents.1514812295.GEOSMART" />
+    <entry file="file://$USER_HOME$/AppData/Local/conda/conda/envs/tensorflow/Lib/site-packages/tensorflow/python/estimator/estimator.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/conda/conda/envs/tensorflow/Lib/site-packages/tensorflow/python/ops/control_flow_ops.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/conda/conda/envs/tensorflow/Lib/site-packages/tensorflow/python/estimator/inputs/pandas_io.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/conda/conda/envs/tensorflow/Lib/site-packages/tensorflow/python/estimator/inputs/inputs.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/conda/conda/envs/tensorflow/Lib/site-packages/tensorflow/python/estimator/inputs/numpy_io.py" />
+    <entry file="file://D:/WorkSpace/tutorial/tensorflow/tensorflow-mnist/app.json" />
+    <entry file="file://D:/WorkSpace/tutorial/tensorflow/tensorflow-mnist/mnist/__init__.py" />
+    <entry file="file://D:/WorkSpace/tutorial/tensorflow/tensorflow-mnist/mnist/model.py" />
+    <entry file="file://D:/WorkSpace/tutorial/tensorflow/tensorflow-mnist/mnist/convolutional.py" />
+    <entry file="file://D:/WorkSpace/tutorial/tensorflow/tensorflow-mnist/mnist/regression.py" />
+    <entry file="file://D:/WorkSpace/tutorial/tensorflow/tensorflow-mnist/main.py" />
+    <entry file="file://D:/WorkSpace/tutorial/tensorflow-mnist/README.md" />
+    <entry file="file://D:/WorkSpace/tutorial/tensorflow-mnist/runtime.txt" />
+    <entry file="file://D:/WorkSpace/tutorial/tensorflow-mnist/package.json" />
+    <entry file="file://D:/WorkSpace/tutorial/tensorflow-mnist/static/js/jquery.min.js" />
+    <entry file="file://D:/WorkSpace/tutorial/tensorflow-mnist/src/js/main.js" />
+    <entry file="file://D:/WorkSpace/tutorial/tensorflow-mnist/static/js/main.js" />
+    <entry file="file://D:/WorkSpace/tutorial/tensorflow-mnist/requirements.txt" />
+    <entry file="file://D:/WorkSpace/tutorial/tensorflow-mnist/mnist/regression.py" />
+    <entry file="file://D:/WorkSpace/tutorial/tensorflow-mnist/mnist/model.py" />
+    <entry file="file://D:/WorkSpace/tutorial/tensorflow-mnist/mnist/convolutional.py" />
+    <entry file="file://D:/WorkSpace/tutorial/tensorflow-mnist/mnist/__init__.py" />
+    <entry file="file://D:/WorkSpace/tutorial/tensorflow/src/mnist/regression.py" />
+    <entry file="file://D:/WorkSpace/tutorial/tensorflow/src/mnist/model.py" />
+    <entry file="file://D:/WorkSpace/tutorial/tensorflow-mnist/main.py" />
+    <entry file="file://D:/WorkSpace/tutorial/tensorflow/src/mnist/convolutional.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/conda/conda/envs/tensorflow/Lib/site-packages/tensorflow/python/platform/app.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/conda/conda/envs/tensorflow/Lib/site-packages/tensorflow/python/ops/nn.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/conda/conda/envs/tensorflow/Lib/site-packages/tensorflow/python/ops/nn_ops.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/conda/conda/envs/tensorflow/Lib/site-packages/tensorflow/python/ops/math_ops.py" />
+    <entry file="file://D:/WorkSpace/tutorial/tensorflow/src/__init__.py" />
+    <entry file="file://D:/WorkSpace/tutorial/tensorflow/src/main.py" />
+    <entry file="file://D:/WorkSpace/tutorial/tensorflow/src/demo/custom_model.py" />
+    <entry file="file://D:/WorkSpace/tutorial/tensorflow/src/demo/helloworld.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/conda/conda/envs/tensorflow/Lib/site-packages/tensorflow/python/framework/ops.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/conda/conda/envs/tensorflow/Lib/site-packages/tensorflow/contrib/learn/python/learn/datasets/mnist.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/conda/conda/envs/tensorflow/Lib/site-packages/tensorflow/examples/tutorials/mnist/input_data.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/conda/conda/envs/tensorflow/Lib/site-packages/tensorflow/python/client/session.py" />
+    <entry file="file://D:/WorkSpace/tutorial/tensorflow/src/demo/linear_regressor.py" />
+    <entry file="file://D:/WorkSpace/tutorial/tensorflow/src/demo/minist_softmax.py" />
+    <entry file="file://D:/WorkSpace/tutorial/tensorflow/src/demo/minist_softmax_tensorboard.py" />
+    <entry file="file://D:/WorkSpace/tutorial/tensorflow/src/demo/minist_cnn_tensorboard.py" />
+    <entry file="file://D:/WorkSpace/tutorial/tensorflow/src/demo/minist_cnn.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/conda/conda/envs/tensorflow/Lib/site-packages/tensorflow/python/ops/gen_array_ops.py" />
+    <entry file="file://$PROJECT_DIR$/OSSHelper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/evernote/api/client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="101" column="0" lean-forward="false" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/lib/evernote/edam/userstore/UserStore.py" />
-    <entry file="file://C:/ProgramData/Anaconda3/Lib/traceback.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="477" column="0" lean-forward="false" selection-start-line="477" selection-start-column="0" selection-end-line="477" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydevd_bundle/pydevd_tracing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydevd_bundle/pydevd_comm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="1133" column="0" lean-forward="false" selection-start-line="1133" selection-start-column="0" selection-end-line="1133" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydevd_frame_eval/pydevd_frame_tracing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="764" column="0" lean-forward="false" selection-start-line="764" selection-start-column="0" selection-end-line="764" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/evernote/edam/userstore/UserStore.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1055" column="0" lean-forward="false" selection-start-line="1055" selection-start-column="0" selection-end-line="1055" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/ProgramData/Anaconda3/Lib/site-packages/html2text/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="861" column="4" lean-forward="false" selection-start-line="861" selection-start-column="4" selection-end-line="861" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/ProgramData/Anaconda3/Lib/site-packages/beautifulsoup4-4.6.0-py3.6.egg-info/dependency_links.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/ProgramData/Anaconda3/Lib/site-packages/beautifulsoup4-4.6.0-py3.6.egg-info/PKG-INFO">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="37">
-          <caret line="10" column="17" lean-forward="true" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/ProgramData/Anaconda3/Lib/site-packages/beautifulsoup4-4.6.0-py3.6.egg-info/requires.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/ProgramData/Anaconda3/Lib/site-packages/beautifulsoup4-4.6.0-py3.6.egg-info/top_level.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sample/client/test.html" />
-    <entry file="file://C:/ProgramData/Anaconda3/Lib/site-packages/bs4/element.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="808" column="21" lean-forward="false" selection-start-line="808" selection-start-column="10" selection-end-line="808" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sample/client/JDK-Collection-HashMap笔记" />
-    <entry file="file://$USER_HOME$/.PyCharm2017.1/system/python_stubs/-313451744/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="339" column="4" lean-forward="false" selection-start-line="339" selection-start-column="4" selection-end-line="339" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sample/client/JDK-Collection-HashMap笔记/HashMap结构.png" />
-    <entry file="file://$PROJECT_DIR$/sample/client/JDK-Collection-HashMap笔记/示例.png" />
-    <entry file="file://$PROJECT_DIR$/sample/client/JDK-Collection-HashMap笔记/类图.png" />
-    <entry file="file://$PROJECT_DIR$/sample/client/JDK-Collection-HashMap笔记.md" />
-    <entry file="file://C:/ProgramData/Anaconda3/Lib/site-packages/bs4/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="304" column="8" lean-forward="false" selection-start-line="304" selection-start-column="8" selection-end-line="304" selection-end-column="8" />
+        <state relative-caret-position="936">
+          <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sample/client/JDK-Collection-HashMap笔记.html" />
-    <entry file="file://$PROJECT_DIR$/lib/evernote/edam/notestore/ttypes.py">
+    <entry file="file://$PROJECT_DIR$/ExportEverNoteBlogForCSDN.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="1786" column="6" lean-forward="false" selection-start-line="1786" selection-start-column="6" selection-end-line="1786" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sample/client/JMS简介.html" />
-    <entry file="file://$PROJECT_DIR$/sample/client/2017/10/JMS简介.html" />
-    <entry file="file://$PROJECT_DIR$/sample/client/2017/09/JDK-Collection-HashMap笔记.html" />
-    <entry file="file://$PROJECT_DIR$/build/lib/evernote/edam/limits/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/build/lib/evernote/edam/limits/ttypes.py" />
-    <entry file="file://$USER_HOME$/.PyCharm2017.1/system/python_stubs/-313451744/_datetime.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="288" column="0" lean-forward="true" selection-start-line="288" selection-start-column="0" selection-end-line="291" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/lib/evernote/edam/limits/constants.py" />
-    <entry file="file://$PROJECT_DIR$/build/lib/thrift/protocol/TBase.py" />
-    <entry file="file://$PROJECT_DIR$/build/lib/thrift/protocol/TBinaryProtocol.py" />
-    <entry file="file://$PROJECT_DIR$/lib/evernote/edam/notestore/NoteStore.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="5679" column="6" lean-forward="false" selection-start-line="5679" selection-start-column="6" selection-end-line="5679" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sample/client/enlogo.png" />
-    <entry file="file://$PROJECT_DIR$/APACHE-LICENSE-2.0.txt" />
-    <entry file="file://$PROJECT_DIR$/LICENSE" />
-    <entry file="file://$PROJECT_DIR$/NOTICE" />
-    <entry file="file://$PROJECT_DIR$/requirements.txt" />
-    <entry file="file://$PROJECT_DIR$/sample/client/EDAMTest.py" />
-    <entry file="file://$PROJECT_DIR$/sample/client/Demo.py" />
-    <entry file="file://$PROJECT_DIR$/setup.py" />
-    <entry file="file://$PROJECT_DIR$/setup.cfg" />
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="68">
-            <caret line="4" column="3" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
-            <folding>
-              <marker date="1506949595666" expanded="true" signature="228:430" ph="{&quot;EvernoteToken&quot;: &quot;S=s6:U=6.....&quot;...}" />
-            </folding>
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/run.cmd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ExportEverNoteBlog.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="43" column="8" lean-forward="false" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
+        <state relative-caret-position="262">
+          <caret line="106" column="23" lean-forward="false" selection-start-line="106" selection-start-column="23" selection-end-line="106" selection-end-column="23" />
           <folding>
-            <element signature="e#46#56#0" expanded="true" />
+            <element signature="e#46#55#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="1" lean-forward="false" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
